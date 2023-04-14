@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() { //window.onload : 이벤트 핸들러, 저장된 함수가 웹 페이지를 로드할 때마다 실행됨
+            
+            //1. 글자 조작
+            let output = '<h1 class = "header">Header</h1>';
+
+            //문서 객체 내부의 글자를 변경
+            // document.body.textContent = output;
+
+            //문자열 내에 HTML 태그가 있으면 HTML 태그를 적용해 내부 글자를 변경
+            document.body.innerHTML = output;
+
+            //2. 스타일 조작
+            let headers = document.getElementsByClassName('header');
+            for(let i = 0; i < headers.length; i++){
+                headers[i].style.backgroundColor = 'red'; //headers 라는 클래스 이름을 가진 태그들의 배경색이 모두 빨간색으로 바뀜
+            }
+
+            //3. 속성 조작
+            //setAttributes(속성이름, 속성값) : 속성 지정
+            //getAttributes(속성이름) : 속성 추출
+            
+            //속성 지정
+            //data- ~~ : 사용자 지정 속성, 웹 표준에서 지정하지 않은 속성을 만듦
+            //사용자 지정 속성은 반드시 속성 조작 메소드를 이용해 접근해야 함
+            document.body.setAttribute('data-custom', 'value'); //사용자 지정 속성인 'data-custom'의 값을 value로 설정
+
+            //속성 추출
+            let dataCustom = document.body.getAttribute('data-custom'); //data-custom의 값을 추출
+            alert(dataCustom); //value
+        };   
+    </script>
+</head>
+<body>
+</body>
+</html>
