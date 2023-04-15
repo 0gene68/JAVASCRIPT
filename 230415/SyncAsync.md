@@ -42,6 +42,7 @@ function waitThreeSeconds() {
 
 waitThreeSeconds();
 
+
 console.log('끝');
 
 /*
