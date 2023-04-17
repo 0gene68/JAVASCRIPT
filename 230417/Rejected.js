@@ -1,4 +1,4 @@
-const asyncRejected = async () => {
+const asyncRejected = async () => { 
     let promiseRejected = new Promise((resolve, reject) => {
         setTimeout(() => reject(new Error()), 3000);
     }); // Promise 객체가 실패 상태가 됨
