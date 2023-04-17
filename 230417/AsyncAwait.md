@@ -1,5 +1,5 @@
 # Async / Await
-- ES8(ES2017) 문법으로, *Promise*를 더 쉽게 사용할 수 있게 해줌
+- ES8(ES2017) 문법으로, *Promise*를 더 쉽게 사용할 수 있게 해줌 
 ## Async / Await의 사용법
 
 - ### Async
